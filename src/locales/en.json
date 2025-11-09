@@ -1,0 +1,176 @@
+{
+  "skills": {
+    "categories": [
+      {
+        "name": "Backend",
+        "skills": "C#, ASP.NET MVC/Core, SQL Server, Entity Framework"
+      },
+      {
+        "name": "APIs & Integrations",
+        "skills": "ASP.NET Web API, RESTful API Design, Mobile App API Development, Integration with Egyptian Tax SDK E-Receipt System"
+      },
+      {
+        "name": "Frontend",
+        "skills": "React, JavaScript, HTML5, CSS3, Bootstrap, Responsive Design"
+      },
+      {
+        "name": "Databases",
+        "skills": "SQL Server, MongoDB"
+      },
+      {
+        "name": "AI",
+        "skills": "Experience using AI tools for programming, debugging, and documentation"
+      },
+      {
+        "name": "DevOps/Tools",
+        "skills": "Docker, Kubernetes, Azure DevOps, Git"
+      },
+      {
+        "name": "Soft Skills",
+        "skills": "Teamwork, Problem-Solving, Time Management"
+      },
+      {
+        "name": "Languages",
+        "skills": "English C1 | German B1-B2 | Arabic Native"
+      }
+    ]
+  },
+  "education": {
+    "entries": [
+      {
+        "title": "University of Duisburg-Essen – B.Sc. Electrical, Electronics and Communication Engineering ISE",
+        "meta": "10/2025 – Present / Aktuell  \nRecognition of credits from Zagazig University, Egypt 2022–2025.  \nFocus: Software Development, Embedded Systems, Data Processing, Communication Technology.",
+        "description": "",
+        "achievements": []
+      },
+      {
+        "title": "Zagazig University – Electronics and Communication Engineering",
+        "meta": "10/2022 – 7/2025  \nIn-depth study of hardware-software integration, embedded programming, and algorithm design.  \nKey Projects:",
+        "description": "Catch the LED Game: Two-player digital logic game with score tracking.",
+        "achievements": [
+          "Wireless Energy Transfer System: Resonant inductive coupling with 85% efficiency.",
+          "Autonomous Light-Following Robot: Real-time navigation with sensor fusion.",
+          "Catch the LED Game: Two-player digital logic game with score tracking."
+        ]
+      },
+      {
+        "title": "STEM High School Diploma – Sharkya STEM High School Mathematics Focus",
+        "meta": "10/2019 – 7/2022  \nGrade: 3.81/4 | Top 100 students in Egypt  \nFoundation in advanced mathematics and analytical problem-solving.",
+        "description": "",
+        "achievements": []
+      }
+    ]
+  },
+  "experience": {
+    "entries": [
+      {
+        "title": "Software Engineer: Full-Stack Development",
+        "meta": "Ideal Systems Company – Cairo, Egypt | *7/2023 – Present*",
+        "description": "Delivered 3 major projects on time in an 8-member team using Git + Azure DevOps.",
+        "achievements": [
+          "Built ERP modules for hospital & manufacturing systems using ASP.NET MVC + SQL Server → digitized patient data for 10+ medical facilities.",
+          "Enhanced UI with React, JavaScript, Bootstrap → 40% increase in user satisfaction.",
+          "Optimized SQL queries → 25% faster response, handling 2M+ records.",
+          "Developed RESTful APIs for 5+ enterprise apps.",
+          "Led code refactoring → 20% improved maintainability.",
+          "Delivered 3 major projects on time in an 8-member team using Git + Azure DevOps."
+        ]
+      },
+      {
+        "title": "Full-Stack Developer Trainee",
+        "meta": "Digital Egypt Pioneers Initiative – Cairo, Egypt | *4/2024 – 10/2024*",
+        "description": "Applied Git workflows, API design, UX/UI standards.",
+        "achievements": [
+          "6-month intensive training in React.js, Node.js, modern web dev.",
+          "Built full-stack e-commerce app React + Node.js/Express.",
+          "Containerized with Docker + Kubernetes.",
+          "Applied Git workflows, API design, UX/UI standards."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "entries": [
+      {
+        "title": "E-Receipt Tax Compliance System *Individual*",
+        "meta": "",
+        "description": "Multi-tenant architecture small shops to enterprises.  \nResult: 60% less manual work, full compliance, major cost savings.",
+        "achievements": [
+          "Automated invoice submission to Egyptian Tax Authority → 500+ companies compliant.",
+          "Real-time ERP sync + financial analytics dashboard.",
+          "Multi-tenant architecture small shops to enterprises.  \nResult: 60% less manual work, full compliance, major cost savings."
+        ]
+      },
+      {
+        "title": "LOTUS HIMS – Hospital Information Management System *Team of 8*",
+        "meta": "Scalable for 50–1,000 bed hospitals.  \nResult: Deployed in 30+ hospitals, improved data flow & compliance.",
+        "description": "Central SQL database with real-time inter-department sync.",
+        "achievements": [
+          "Web-based system for patient records, scheduling, billing, staff management.",
+          "Central SQL database with real-time inter-department sync.",
+          "Scalable for 50–1,000 bed hospitals.  \nResult: Deployed in 30+ hospitals, improved data flow & compliance."
+        ]
+      },
+      {
+        "title": "Pinion ERP System *Team of 6*",
+        "meta": "",
+        "description": "Multi-currency automated reporting.  \nResult: Live in 15+ organizations, significant operational efficiency.",
+        "achievements": [
+          "Modules: Inventory, HR, Finance, Access Control.",
+          "30% faster data processing, 45% less admin effort.",
+          "Multi-currency automated reporting.  \nResult: Live in 15+ organizations, significant operational efficiency."
+        ]
+      }
+    ]
+  },
+  "leadership": {
+    "entries": [
+      {
+        "description": "Founder & President – Robotics Club  \nLed 40+ tech projects, organized Arduino & web dev workshops."
+      },
+      {
+        "description": "Research Team Leader – Zagazig University  \nPublished papers at international conferences."
+      },
+      {
+        "description": "Multimedia Leader – NASA Space Apps Sharkya  \nManaged media for 250+ participants."
+      },
+      {
+        "description": "Volunteer – Resala Charity & Egyptian Red Crescent  \nOrganized health & donation drives for 4.5M+ people."
+      }
+    ]
+  },
+  "awards": {
+    "categories": [
+      {
+        "name": "International Competitions",
+        "items": [
+          "1st Place – International Science and Engineering Fair ISEF",
+          "1st Place – NRC Conference on Science and Sustainable Development",
+          "5th Place Team – Physics Brawl, Charles University",
+          "Finalist – International Youth Math Challenge IYMC"
+        ]
+      },
+      {
+        "name": "Recognitions",
+        "items": [
+          "Honorable Mention – 4th Int. Conference on Engineering Science",
+          "US Embassy Recognition – California Activity Club",
+          "Egyptian Ministry of Youth & Sports Award – Science & Community Work"
+        ]
+      },
+      {
+        "name": "Certifications",
+        "items": [
+          "MTA: Software Development Fundamentals Microsoft",
+          "MOS: Microsoft Office PowerPoint"
+        ]
+      }
+    ]
+  },
+  "hero": {
+    "statement": "Ambitious Full-Stack Working Student B.Sc., University of Duisburg-Essen with 3 years of comprehensive professional experience as a Software Engineer in developing scalable ERP systems ASP.NET, React, SQL. Specialized in database optimization, which led to a 25% reduction in system response times when processing over 2 million data records. I am seeking a challenging role to directly contribute my proven technical leadership skills to innovative projects."
+  },
+  "about": {
+    "personalInfo": {}
+  }
+}
