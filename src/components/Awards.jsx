@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 
 const Awards = () => {
   const { t } = useTranslation();
@@ -26,17 +27,20 @@ const Awards = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.items.map((item, i) => (
-                  <motion.div
+                  <Tilt
                     key={i}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center group relative overflow-hidden"
-                    whileHover={{ scale: 1.05, y: -5, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
-                    transition={{ duration: 0.3 }}
+                    className="parallax-effect-glare-scale"
+                    perspective={500}
+                    glareEnable={true}
+                    glareMaxOpacity={0.45}
+                    scale={1.02}
                   >
-                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
-                    <p className="text-gray-700 dark:text-gray-300 z-10 relative">
-                      {item}
-                    </p>
-                  </motion.div>
+                    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center h-full">
+                      <p className="text-gray-700 dark:text-gray-300 z-10 relative">
+                        {item}
+                      </p>
+                    </div>
+                  </Tilt>
                 ))}
               </div>
             </motion.div>

@@ -1,74 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import ReactCardFlip from 'react-card-flip';
+import Confetti from 'react-confetti';
 
 const Education = () => {
   const { t } = useTranslation();
   const educationEntries = t('education.entries', { returnObjects: true });
+  const [flipped, setFlipped] = useState(Array(educationEntries.length).fill(false));
+  const [showConfetti, setShowConfetti] = useState(false);
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+  const handleFlip = (index) => {
+    const newFlipped = [...flipped];
+    newFlipped[index] = !newFlipped[index];
+    setFlipped(newFlipped);
   };
 
   return (
     <section id="education" className="py-20 bg-gray-50 dark:bg-gray-900">
+      {showConfetti && <Confetti />}
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">
           {t('education.title')}
         </h2>
-        <motion.div
-          className="relative"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="border-l-2 border-blue-500 dark:border-cyan-400 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {educationEntries.map((entry, index) => (
-            <motion.div
-              key={index}
-              className="mb-8 flex justify-between items-center w-full"
-              variants={item}
-            >
-              <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'pl-8'}`}>
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl dark:hover:shadow-cyan-500/50 transition-shadow duration-300">
-                  <p className="text-gray-500 dark:text-gray-400">{entry.duration}</p>
-                  <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-                    {entry.institution}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300">{entry.degree}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                    {entry.description}
-                  </p>
-                  {entry.projects && (
-                    <ul className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                      {entry.projects.map((project, i) => (
-                        <li key={i}>
-                          <strong>{project.name}:</strong> {project.description}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </div>
-              <div className="z-10 flex items-center bg-blue-500 dark:bg-cyan-400 shadow-xl w-8 h-8 rounded-full animate-pulse">
-                <div className="bg-white dark:bg-gray-800 w-4 h-4 rounded-full mx-auto"></div>
-              </div>
-              <div className={`w-5/12 ${index % 2 === 0 ? 'pl-8' : 'text-left pr-8'}`}></div>
-            </motion.div>
+            <ReactCardFlip isFlipped={flipped[index]} flipDirection="horizontal">
+              <motion.div
+                key="front"
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 h-96 flex flex-col justify-center items-center text-center cursor-pointer"
+                onClick={() => handleFlip(index)}
+                onMouseEnter={() => entry.degree.includes('Top 100') && setShowConfetti(true)}
+                onMouseLeave={() => setShowConfetti(false)}
+                whileHover={{ scale: 1.05 }}
+              >
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+                  {entry.institution}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300">{entry.degree}</p>
+              </motion.div>
+
+              <motion.div
+                key="back"
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 h-96 flex flex-col justify-center cursor-pointer"
+                onClick={() => handleFlip(index)}
+              >
+                <p className="text-gray-500 dark:text-gray-400">{entry.duration}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                  {entry.description}
+                </p>
+                {entry.projects && (
+                  <ul className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    {entry.projects.map((project, i) => (
+                      <li key={i}>
+                        <strong>{project.name}:</strong> {project.description}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </motion.div>
+            </ReactCardFlip>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

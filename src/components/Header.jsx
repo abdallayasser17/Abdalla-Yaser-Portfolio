@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Logo from './Logo';
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -10,21 +11,11 @@ const Header = () => {
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
-      document.body.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
-      document.body.classList.remove('dark');
     }
     localStorage.setItem('theme', theme);
   }, [theme]);
-
-  useEffect(() => {
-    const stored = localStorage.getItem('theme');
-    if (!stored && window.matchMedia) {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(prefersDark ? 'dark' : 'light');
-    }
-  }, []);
 
   const handleThemeSwitch = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -42,43 +33,41 @@ const Header = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" aria-label="Abdalla Yaser - Home" className="text-2xl font-bold text-gray-800 dark:text-white font-mono tracking-wide">
-          AY
-        </a>
+        <Logo />
         <nav className="hidden md:flex space-x-8">
-          <a href="#home" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#home" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.home')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
-          <a href="#about" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#about" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.about')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
-          <a href="#skills" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#skills" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.skills')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
-          <a href="#education" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#education" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.education')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
-          <a href="#experience" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#experience" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.experience')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
-          <a href="#projects" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#projects" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.projects')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
-          <a href="#leadership" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#leadership" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.leadership')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
-          <a href="#awards" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#awards" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.awards')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
-          <a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
+          <a href="#contact" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative group">
             {t('header.nav.contact')}
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-blue-500 dark:bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
