@@ -1,14 +1,15 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import idImg from '../../img/id.png';
 
 const About = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="relative pt-12 pb-20 -mt-8 md:-mt-12 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
           {t('about.title')}
         </h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
@@ -20,7 +21,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://media.licdn.com/dms/image/D4E03AQGg-VYX4WJ3Lw/profile-displayphoto-shrink_800_800/0/1715433054113?e=1728518400&v=beta&t=GvVf-3a2-21-1s5-345-42-21-1s5-345-42-21-1s5-34"
+              src={idImg}
               alt="Abdalla Yaser"
               className="rounded-lg shadow-lg mx-auto w-full h-auto"
             />

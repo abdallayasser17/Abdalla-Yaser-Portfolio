@@ -6,7 +6,7 @@ import * as THREE from 'three';
 const SkillOrbs = ({ skills }) => {
   const Word = ({ children, ...props }) => {
     const color = new THREE.Color();
-    const fontProps = { font: '/Inter-Bold.woff', fontSize: 2.5, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
+    const fontProps = { fontSize: 2.5, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
     const ref = useRef()
     useFrame(({ camera }) => {
       ref.current.quaternion.copy(camera.quaternion)
@@ -21,9 +21,13 @@ const SkillOrbs = ({ skills }) => {
       const phiSpan = Math.PI / (count + 1)
       const thetaSpan = (Math.PI * 2) / count
       for (let i = 1; i < count + 1; i++)
-        for (let j = 0; j < count; j++) temp.push([new THREE.Vector3().setFromSpherical(spherical.set(radius, phiSpan * i, thetaSpan * j)), skills[Math.floor(Math.random() * skills.length)].name])
+        for (let j = 0; j < count; j++) {
+          const pos = new THREE.Vector3().setFromSpherical(spherical.set(radius, phiSpan * i, thetaSpan * j))
+          const label = skills && skills.length ? skills[Math.floor(Math.random() * skills.length)].name : 'Skill'
+          temp.push([pos, label])
+        }
       return temp
-    }, [count, radius])
+    }, [count, radius, skills])
     return words.map(([pos, word], index) => <Word key={index} position={pos} children={word} />)
   }
 

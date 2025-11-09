@@ -10,11 +10,21 @@ const Header = () => {
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+      document.body.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark');
     }
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme');
+    if (!stored && window.matchMedia) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
+    }
+  }, []);
 
   const handleThemeSwitch = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -32,7 +42,9 @@ const Header = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-gray-800 dark:text-white font-mono">AY</div>
+        <a href="#home" aria-label="Abdalla Yaser - Home" className="text-2xl font-bold text-gray-800 dark:text-white font-mono tracking-wide">
+          AY
+        </a>
         <nav className="hidden md:flex space-x-8">
           <a href="#home" className="text-gray-800 dark:text-gray-200 hover:text-blue-500 dark:hover:text-cyan-400 relative">
             {t('header.nav.home')}
