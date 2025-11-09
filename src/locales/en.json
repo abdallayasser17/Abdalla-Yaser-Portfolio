@@ -1,0 +1,237 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "education": "Education",
+      "experience": "Experience",
+      "projects": "Projects",
+      "leadership": "Leadership",
+      "awards": "Awards",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Full-Stack Software Engineer",
+    "subtitle": "Abdalla Yaser",
+    "statement": "Ambitious Full-Stack Working Student (B.Sc., University of Duisburg-Essen) with 3 years of comprehensive professional experience as a Software Engineer in developing scalable ERP systems (ASP.NET, React, SQL). Specialized in database optimization, which led to a 25% reduction in system response times when processing over 2 million data records. I am seeking a challenging role to directly contribute my proven technical leadership skills to innovative projects.",
+    "button": "Explore My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "personalInfo": {
+      "name": "Abdalla Yaser",
+      "nationality": "Egyptian",
+      "dob": "17/10/2004",
+      "address": "45141 - Essen, NRW, Germany",
+      "email": "abdallayasser2210@gmail.com",
+      "phone": "+49 163 1689272",
+      "linkedin": "http://www.linkedin.com/in/abdalla-yaser"
+    },
+    "funFacts": [
+      "Top 100 in Egypt"
+    ]
+  },
+  "skills": {
+    "title": "Core Competencies",
+    "categories": [
+      {
+        "name": "Backend",
+        "skills": "C#, ASP.NET MVC/Core, SQL Server, Entity Framework"
+      },
+      {
+        "name": "APIs & Integrations",
+        "skills": "ASP.NET Web API, RESTful API Design, Mobile App API Development, Integration with Egyptian Tax SDK (E-Receipt System)"
+      },
+      {
+        "name": "Frontend",
+        "skills": "React, JavaScript, HTML5, CSS3, Bootstrap, Responsive Design"
+      },
+      {
+        "name": "Databases",
+        "skills": "SQL Server, MongoDB"
+      },
+      {
+        "name": "AI",
+        "skills": "Experience using AI tools for programming, debugging, and documentation"
+      },
+      {
+        "name": "DevOps/Tools",
+        "skills": "Docker, Kubernetes, Azure DevOps, Git"
+      },
+      {
+        "name": "Soft Skills",
+        "skills": "Teamwork, Problem-Solving, Time Management"
+      },
+      {
+        "name": "Languages",
+        "skills": "English C1 | German B1-B2 | Arabic Native"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "entries": [
+      {
+        "institution": "University of Duisburg-Essen",
+        "degree": "B.Sc. Electrical, Electronics and Communication Engineering (ISE)",
+        "duration": "10/2025 – Present",
+        "description": "Recognition of credits from Zagazig University, Egypt (2022–2025). Focus: Software Development, Embedded Systems, Data Processing, Communication Technology."
+      },
+      {
+        "institution": "Zagazig University",
+        "degree": "Electronics and Communication Engineering",
+        "duration": "10/2022 – 7/2025",
+        "description": "In-depth study of hardware-software integration, embedded programming, and algorithm design.",
+        "projects": [
+          {
+            "name": "Wireless Energy Transfer System",
+            "description": "Resonant inductive coupling with 85% efficiency."
+          },
+          {
+            "name": "Autonomous Light-Following Robot",
+            "description": "Real-time navigation with sensor fusion."
+          },
+          {
+            "name": "Catch the LED Game",
+            "description": "Two-player digital logic game with score tracking."
+          }
+        ]
+      },
+      {
+        "institution": "STEM High School Diploma",
+        "degree": "Sharkya STEM High School (Mathematics Focus)",
+        "duration": "10/2019 – 7/2022",
+        "description": "Grade: 3.81/4 | Top 100 students in Egypt. Foundation in advanced mathematics and analytical problem-solving."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "entries": [
+      {
+        "company": "Ideal Systems Company – Cairo, Egypt",
+        "role": "Software Engineer: Full-Stack Development",
+        "duration": "7/2023 – Present",
+        "achievements": [
+          "Built ERP modules for hospital & manufacturing systems using ASP.NET MVC + SQL Server → digitized patient data for 10+ medical facilities.",
+          "Enhanced UI with React, JavaScript, Bootstrap → 40% increase in user satisfaction.",
+          "Optimized SQL queries → 25% faster response, handling 2M+ records.",
+          "Developed RESTful APIs for 5+ enterprise apps.",
+          "Led code refactoring → 20% improved maintainability.",
+          "Delivered 3 major projects on time in an 8-member team using Git + Azure DevOps."
+        ]
+      },
+      {
+        "company": "Digital Egypt Pioneers Initiative – Cairo, Egypt",
+        "role": "Full-Stack Developer Trainee",
+        "duration": "4/2024 – 10/2024",
+        "achievements": [
+          "6-month intensive training in React.js, Node.js, modern web dev.",
+          "Built full-stack e-commerce app (React + Node.js/Express).",
+          "Containerized with Docker + Kubernetes.",
+          "Applied Git workflows, API design, UX/UI standards."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "entries": [
+      {
+        "name": "E-Receipt Tax Compliance System (Individual)",
+        "tech": "ASP.NET Core, SQL Server, Entity Framework, REST APIs, Bootstrap",
+        "description": [
+          "Automated invoice submission to Egyptian Tax Authority → 500+ companies compliant.",
+          "Real-time ERP sync + financial analytics dashboard.",
+          "Multi-tenant architecture (small shops to enterprises)."
+        ],
+        "result": "60% less manual work, full compliance, major cost savings."
+      },
+      {
+        "name": "LOTUS HIMS – Hospital Information Management System (Team of 8)",
+        "tech": "ASP.NET MVC, SQL Server, jQuery, Bootstrap",
+        "description": [
+          "Web-based system for patient records, scheduling, billing, staff management.",
+          "Central SQL database with real-time inter-department sync.",
+          "Scalable for 50–1,000 bed hospitals."
+        ],
+        "result": "Deployed in 30+ hospitals, improved data flow & compliance."
+      },
+      {
+        "name": "Pinion ERP System (Team of 6)",
+        "tech": "ASP.NET MVC, SQL Server, jQuery, Bootstrap",
+        "description": [
+          "Modules: Inventory, HR, Finance, Access Control.",
+          "30% faster data processing, 45% less admin effort.",
+          "Multi-currency automated reporting."
+        ],
+        "result": "Live in 15+ organizations, significant operational efficiency."
+      }
+    ]
+  },
+  "leadership": {
+    "title": "Leadership & Extracurricular",
+    "entries": [
+      {
+        "role": "Founder & President – Robotics Club",
+        "description": "Led 40+ tech projects, organized Arduino & web dev workshops."
+      },
+      {
+        "role": "Research Team Leader – Zagazig University",
+        "description": "Published papers at international conferences."
+      },
+      {
+        "role": "Multimedia Leader – NASA Space Apps Sharkya",
+        "description": "Managed media for 250+ participants."
+      },
+      {
+        "role": "Volunteer – Resala Charity & Egyptian Red Crescent",
+        "description": "Organized health & donation drives for 4.5M+ people."
+      }
+    ]
+  },
+  "awards": {
+    "title": "Awards & Certificates",
+    "categories": [
+      {
+        "name": "International Competitions",
+        "items": [
+          "1st Place – International Science and Engineering Fair (ISEF)",
+          "1st Place – NRC Conference on Science and Sustainable Development",
+          "5th Place (Team) – Physics Brawl, Charles University",
+          "Finalist – International Youth Math Challenge (IYMC)"
+        ]
+      },
+      {
+        "name": "Recognitions",
+        "items": [
+          "Honorable Mention – 4th Int. Conference on Engineering Science",
+          "US Embassy Recognition – California Activity Club",
+          "Egyptian Ministry of Youth & Sports Award – Science & Community Work"
+        ]
+      },
+      {
+        "name": "Certifications",
+        "items": [
+          "MTA: Software Development Fundamentals (Microsoft)",
+          "MOS: Microsoft Office PowerPoint"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "successMessage": "Message launched!"
+  },
+  "footer": {
+    "lastUpdated": "November 2025"
+  }
+}
